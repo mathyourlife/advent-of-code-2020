@@ -13,6 +13,7 @@ func main() {
 	days := []DayMaker{
 		NewDay01,
 		NewDay02,
+		NewDay03,
 	}
 	d := days[solveDayNum-1]()
 	d.SolvePart1()
