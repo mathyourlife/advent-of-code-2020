@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"strings"
 )
 
@@ -340,8 +339,22 @@ func NewDay03() Day {
 }
 
 func (d *Day03) SolvePart1() {
+	trees := d.countTrees(3, 1)
+	fmt.Printf("%d trees encountered\n", trees)
+}
+
+func (d *Day03) SolvePart2() {
+	product := 1
+	product *= d.countTrees(1, 1)
+	product *= d.countTrees(3, 1)
+	product *= d.countTrees(5, 1)
+	product *= d.countTrees(7, 1)
+	product *= d.countTrees(1, 2)
+	fmt.Printf("%d trees product\n", product)
+}
+
+func (d *Day03) countTrees(over, down int) int {
 	rows, cols := d.getDims()
-	log.Println(rows, cols)
 	row, col := 0, 0
 	countTrees := 0
 	for {
@@ -352,13 +365,10 @@ func (d *Day03) SolvePart1() {
 		if loc == "#" {
 			countTrees++
 		}
-		col += 3
-		row += 1
+		col += over
+		row += down
 	}
-	fmt.Printf("%d trees encountered\n", countTrees)
-}
-
-func (d *Day03) SolvePart2() {
+	return countTrees
 }
 
 func (d *Day03) getLocation(row, col, rows, cols int) string {
