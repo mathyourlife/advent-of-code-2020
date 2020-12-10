@@ -17,6 +17,7 @@ func main() {
 		NewDay04,
 		NewDay05,
 		NewDay06,
+		NewDay07,
 	}
 	d := days[solveDayNum-1]()
 	d.SolvePart1()
