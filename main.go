@@ -1,37 +1,32 @@
 package main
 
 import (
-	"fmt"
+	"io/ioutil"
+	"log"
 	"os"
+	"regexp"
 	"strconv"
+
+	"github.com/mathyourlife/advent-of-code-2020/solver"
 )
 
 func main() {
-	solveDay := os.Args[1]
-	solveDayNum, _ := strconv.Atoi(solveDay)
-	fmt.Printf("solving Day %s\n", solveDay)
-	days := []DayMaker{
-		NewDay01,
-		NewDay02,
-		NewDay03,
-		NewDay04,
-		NewDay05,
-		NewDay06,
-		NewDay07,
-		NewDay08,
-		NewDay09,
-		NewDay10,
-		NewDay11,
-		NewDay12,
+
+	re := regexp.MustCompile(`.*/day(\d+)`)
+	inputFile := os.Args[1]
+	match := re.FindStringSubmatch(inputFile)
+	day, err := strconv.Atoi(match[1])
+	if err != nil {
+		log.Fatalf("unable to determine what day to solve: %s", inputFile)
 	}
-	d := days[solveDayNum-1]()
-	d.SolvePart1()
-	d.SolvePart2()
-}
+	log.Printf("solving day %d", day)
 
-type DayMaker func() Day
+	content, err := ioutil.ReadFile(inputFile)
+	if err != nil {
+		log.Fatal(err)
+	}
 
-type Day interface {
-	SolvePart1()
-	SolvePart2()
+	solver := solver.NewSolver(day)
+	solver.SolvePart1(string(content))
+	solver.SolvePart2(string(content))
 }
