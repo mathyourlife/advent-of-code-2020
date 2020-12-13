@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
@@ -27,6 +28,8 @@ func main() {
 	}
 
 	solver := solver.NewSolver(day)
+	fmt.Println("-------------------- PART 1 --------------------")
 	solver.SolvePart1(string(content))
+	fmt.Println("-------------------- PART 2 --------------------")
 	solver.SolvePart2(string(content))
 }
