@@ -17,7 +17,7 @@ func NewDay08() Solver {
 }
 
 func (d *Day08) SolvePart1(content string) {
-	d.instructions = strings.Split(strings.TrimSpace(content), "\n")
+	d.instructions = strings.Split(content, "\n")
 
 	executed := make([]bool, len(d.instructions))
 	for {
@@ -32,7 +32,7 @@ func (d *Day08) SolvePart1(content string) {
 
 func (d *Day08) SolvePart2(content string) {
 
-	original := strings.Split(strings.TrimSpace(content), "\n")
+	original := strings.Split(content, "\n")
 	for step := 0; step < len(original); step++ {
 		d.instructions = make([]string, len(original))
 		copy(d.instructions, original)

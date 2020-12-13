@@ -18,14 +18,14 @@ func NewDay11() Solver {
 func (d *Day11) SolvePart1(content string) {
 
 	d.mode = "around"
-	stabilized := d.stabilize(strings.TrimSpace(content))
+	stabilized := d.stabilize(content)
 	fmt.Printf("%d occupied seats\n", strings.Count(stabilized, "#"))
 }
 
 func (d *Day11) SolvePart2(content string) {
 
 	d.mode = "seen"
-	stabilized := d.stabilize(strings.TrimSpace(content))
+	stabilized := d.stabilize(content)
 	fmt.Printf("%d occupied seats\n", strings.Count(stabilized, "#"))
 }
 

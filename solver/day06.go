@@ -14,7 +14,7 @@ func NewDay06() Solver {
 
 func (d *Day06) SolvePart1(content string) {
 	fullYesCount := 0
-	for _, groupDeclarations := range strings.Split(strings.TrimSpace(content), "\n\n") {
+	for _, groupDeclarations := range strings.Split(content, "\n\n") {
 		fullYesCount += d.countAnyYes(groupDeclarations)
 	}
 	fmt.Printf("total 'any' yes counts %d\n", fullYesCount)
@@ -22,7 +22,7 @@ func (d *Day06) SolvePart1(content string) {
 
 func (d *Day06) SolvePart2(content string) {
 	fullYesCount := 0
-	for _, groupDeclarations := range strings.Split(strings.TrimSpace(content), "\n\n") {
+	for _, groupDeclarations := range strings.Split(content, "\n\n") {
 		fullYesCount += d.countAllYes(groupDeclarations)
 	}
 	fmt.Printf("total 'all' yes counts %d\n", fullYesCount)

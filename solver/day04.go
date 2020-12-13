@@ -15,13 +15,11 @@ func NewDay04() Solver {
 }
 
 func (d *Day04) SolvePart1(content string) {
-	fmt.Printf("%d accepted passports\n", d.countAcceptedPassports(
-		strings.TrimSpace(content)))
+	fmt.Printf("%d accepted passports\n", d.countAcceptedPassports(content))
 }
 
 func (d *Day04) SolvePart2(content string) {
-	fmt.Printf("%d verified passports\n", d.verifiedAcceptedPassports(
-		strings.TrimSpace(content)))
+	fmt.Printf("%d verified passports\n", d.verifiedAcceptedPassports(content))
 }
 
 func (d *Day04) verifiedAcceptedPassports(content string) int {

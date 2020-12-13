@@ -14,7 +14,7 @@ func NewDay07() Solver {
 }
 
 func (d *Day07) SolvePart1(content string) {
-	rs := NewDay07RuleSet(strings.TrimSpace(content))
+	rs := NewDay07RuleSet(content)
 
 	countGold := 0
 	for _, rule := range rs.Rules {
@@ -30,7 +30,7 @@ func (d *Day07) SolvePart1(content string) {
 }
 
 func (d *Day07) SolvePart2(content string) {
-	rs := NewDay07RuleSet(strings.TrimSpace(content))
+	rs := NewDay07RuleSet(content)
 
 	totals := map[string]int{}
 	for _, rule := range rs.Rules {

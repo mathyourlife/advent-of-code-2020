@@ -7,6 +7,7 @@ import (
 	"os"
 	"regexp"
 	"strconv"
+	"strings"
 
 	"github.com/mathyourlife/advent-of-code-2020/solver"
 )
@@ -26,10 +27,11 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	contentStr := strings.TrimSpace(string(content))
 
 	solver := solver.NewSolver(day)
 	fmt.Println("-------------------- PART 1 --------------------")
-	solver.SolvePart1(string(content))
+	solver.SolvePart1(contentStr)
 	fmt.Println("-------------------- PART 2 --------------------")
-	solver.SolvePart2(string(content))
+	solver.SolvePart2(contentStr)
 }

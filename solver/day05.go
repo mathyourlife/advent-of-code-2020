@@ -15,7 +15,7 @@ func NewDay05() Solver {
 
 func (d *Day05) SolvePart1(content string) {
 	backOfPlane := 0
-	for _, pass := range strings.Split(strings.TrimSpace(content), "\n") {
+	for _, pass := range strings.Split(content, "\n") {
 		seatid := d.seatID(pass)
 		if seatid > backOfPlane {
 			backOfPlane = seatid
@@ -25,7 +25,7 @@ func (d *Day05) SolvePart1(content string) {
 }
 
 func (d *Day05) SolvePart2(content string) {
-	passes := strings.Split(strings.TrimSpace(content), "\n")
+	passes := strings.Split(content, "\n")
 	occupied := make([]int, 0, len(passes))
 	for _, pass := range passes {
 		seatid := d.seatID(pass)

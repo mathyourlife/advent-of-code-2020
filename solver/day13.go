@@ -90,7 +90,7 @@ func (d *Day13) nextDeparture(ts, busID int) int {
 }
 
 func (d *Day13) parseProblem(content string) (int, []int, []int) {
-	parts := strings.Split(strings.TrimSpace(content), "\n")
+	parts := strings.Split(content, "\n")
 	ts, _ := strconv.Atoi(parts[0])
 	busIDs := []int{}
 	offsets := []int{}

@@ -14,13 +14,13 @@ func NewDay02() Solver {
 }
 
 func (d *Day02) SolvePart1(content string) {
-	records := strings.Split(strings.TrimSpace(content), "\n")
+	records := strings.Split(content, "\n")
 	numValid := d.countValidPasswordsV1(records)
 	fmt.Printf("%d valid passwords by frequency\n", numValid)
 }
 
 func (d *Day02) SolvePart2(content string) {
-	records := strings.Split(strings.TrimSpace(content), "\n")
+	records := strings.Split(content, "\n")
 	numValid := d.countValidPasswordsV2(records)
 	fmt.Printf("%d valid passwords by position\n", numValid)
 }
