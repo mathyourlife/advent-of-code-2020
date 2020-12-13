@@ -33,6 +33,8 @@ func NewSolver(day int) Solver {
 		return NewDay12()
 	case 13:
 		return NewDay13()
+	case 14:
+		return NewDay14()
 	}
 	return nil
 }
