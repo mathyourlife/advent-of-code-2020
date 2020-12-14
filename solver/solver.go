@@ -1,8 +1,8 @@
 package solver
 
 type Solver interface {
-	SolvePart1(input string)
-	SolvePart2(input string)
+	SolvePart1(content string)
+	SolvePart2(content string)
 }
 
 func NewSolver(day int) Solver {
