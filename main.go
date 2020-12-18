@@ -33,5 +33,6 @@ func main() {
 	fmt.Println("-------------------- PART 1 --------------------")
 	solver.SolvePart1(contentStr)
 	fmt.Println("-------------------- PART 2 --------------------")
+	solver.Reset()
 	solver.SolvePart2(contentStr)
 }

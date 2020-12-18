@@ -11,6 +11,8 @@ func NewDay03() Solver {
 	return d
 }
 
+func (d *Day03) Reset() {}
+
 func (d *Day03) SolvePart1(content string) {
 	grid := NewWrapStringGrid(content)
 	trees := d.countTrees(grid, 3, 1)

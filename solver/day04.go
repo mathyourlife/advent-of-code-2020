@@ -14,6 +14,8 @@ func NewDay04() Solver {
 	return d
 }
 
+func (d *Day04) Reset() {}
+
 func (d *Day04) SolvePart1(content string) {
 	fmt.Printf("%d accepted passports\n", d.countAcceptedPassports(content))
 }

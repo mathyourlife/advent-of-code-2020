@@ -7,6 +7,8 @@ func NewDayTEMPLATE() Solver {
 	return &DayTEMPLATE{}
 }
 
+func (d *DayTEMPLATE) Reset() {}
+
 func (d *DayTEMPLATE) SolvePart1(content string) {
 }
 

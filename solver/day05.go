@@ -13,6 +13,8 @@ func NewDay05() Solver {
 	return d
 }
 
+func (d *Day05) Reset() {}
+
 func (d *Day05) SolvePart1(content string) {
 	backOfPlane := 0
 	for _, pass := range strings.Split(content, "\n") {

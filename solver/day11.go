@@ -15,6 +15,11 @@ func NewDay11() Solver {
 	return &Day11{}
 }
 
+func (d *Day11) Reset() {
+	d.mode = ""
+	d.grid = ""
+}
+
 func (d *Day11) SolvePart1(content string) {
 
 	d.mode = "around"

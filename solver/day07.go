@@ -13,6 +13,8 @@ func NewDay07() Solver {
 	return d
 }
 
+func (d *Day07) Reset() {}
+
 func (d *Day07) SolvePart1(content string) {
 	rs := NewDay07RuleSet(content)
 

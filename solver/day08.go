@@ -16,6 +16,12 @@ func NewDay08() Solver {
 	return &Day08{}
 }
 
+func (d *Day08) Reset() {
+	d.instructions = []string{}
+	d.accumulator = 0
+	d.index = 0
+}
+
 func (d *Day08) SolvePart1(content string) {
 	d.instructions = strings.Split(content, "\n")
 

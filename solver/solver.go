@@ -3,6 +3,7 @@ package solver
 type Solver interface {
 	SolvePart1(content string)
 	SolvePart2(content string)
+	Reset()
 }
 
 func NewSolver(day int) Solver {

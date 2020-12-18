@@ -13,6 +13,8 @@ func NewDay09() Solver {
 	return &Day09{}
 }
 
+func (d *Day09) Reset() {}
+
 func (d *Day09) SolvePart1(content string) {
 	seq := InputToInts(content)
 	valid, target, pos := d.validateSequence(seq, 25)

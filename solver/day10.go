@@ -12,6 +12,8 @@ func NewDay10() Solver {
 	return &Day10{}
 }
 
+func (d *Day10) Reset() {}
+
 func (d *Day10) SolvePart1(content string) {
 	fmt.Printf("just used excel\n")
 }

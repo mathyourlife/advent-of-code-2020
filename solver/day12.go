@@ -14,6 +14,8 @@ func NewDay12() Solver {
 	return &Day12{}
 }
 
+func (d *Day12) Reset() {}
+
 func (d *Day12) SolvePart1(content string) {
 	s := &Day12State{
 		x: []int{0, 0, 0},

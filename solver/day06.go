@@ -12,6 +12,8 @@ func NewDay06() Solver {
 	return d
 }
 
+func (d *Day06) Reset() {}
+
 func (d *Day06) SolvePart1(content string) {
 	fullYesCount := 0
 	for _, groupDeclarations := range strings.Split(content, "\n\n") {

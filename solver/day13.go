@@ -14,6 +14,8 @@ func NewDay13() Solver {
 	return &Day13{}
 }
 
+func (d *Day13) Reset() {}
+
 func (d *Day13) SolvePart1(content string) {
 	ts, busIDs, _ := d.parseProblem(content)
 	earliestTS := d.nextDeparture(ts, busIDs[0])

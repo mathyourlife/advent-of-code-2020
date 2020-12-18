@@ -10,6 +10,8 @@ func NewDay01() Solver {
 	return &Day01{}
 }
 
+func (d *Day01) Reset() {}
+
 func (d *Day01) SolvePart1(content string) {
 	expenses := InputToInts(content)
 	entryA, entryB := d.findTwoExpenseEntries(expenses)

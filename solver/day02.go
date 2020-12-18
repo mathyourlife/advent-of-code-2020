@@ -13,6 +13,8 @@ func NewDay02() Solver {
 	return d
 }
 
+func (d *Day02) Reset() {}
+
 func (d *Day02) SolvePart1(content string) {
 	records := strings.Split(content, "\n")
 	numValid := d.countValidPasswordsV1(records)
